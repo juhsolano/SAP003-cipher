@@ -1,3 +1,11 @@
+header{
+  text-align: center;
+}
+
+body{
+  background: white;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -22,6 +30,17 @@ ul {
     background-color: #111111;
   }
 
-//Para fornulários
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form
+  footer {
+    position: fixed;
+    height: 50px;
+    background-color: #e40ac7;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* Para fornulários */
+/* https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form */
 

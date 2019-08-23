@@ -1,26 +1,25 @@
 window.cipher = {
-  encode : encode,
-  decode : decode,
-}
+  encode: encode,
+  decode: decode,
+};
 
 function encode (offset, str) {
   let result = "";
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
       result += String.fromCharCode((str.charCodeAt(i) - 65 + offset) % 26 + 65);
     } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
-    result += String.fromCharCode((str.charCodeAt(i) - 97 + offset) % 26 + 97);
-  } else {
-    result += str[i];
-  }  
-}
-  console.log(result);
+      result += String.fromCharCode((str.charCodeAt(i) - 97 + offset) % 26 + 97);
+    } else {
+      result += str[i];
+    }  
+  }
   return result;
 }
 
 function decode (offset, str) {
   let decoResult = "";
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
       decoResult += String.fromCharCode((str.charCodeAt(i) - 90 - offset) % 26 +90);
     } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
@@ -29,6 +28,5 @@ function decode (offset, str) {
       decoResult += str[i];
     }
   }
-  console.log(decoResult);
   return decoResult;
 }
