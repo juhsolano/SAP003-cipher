@@ -1,62 +1,236 @@
-header{
-  text-align: center;
-}
-
 body{
   background: white;
 }
 
-ul {
-    list-style-type: none;
+header{
+  display: inline;
+  text-align: center;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16 px;
+  font-weight: Medium;
+  max-width: 2000px;
+  color: black;
+}
+
+.menu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu ul {
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    list-style-type: none;
+    line-height:20px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12 px;
     overflow: hidden;
     background-color: #e40ac7;
   }
   
-  li {
-    float: left;
+  .menu li {
+    display: inline-block;
   }
   
-  li a {
+  .menu li a {
+    background: #e40ac7;
     display: block;
     color: white;
     text-align: center;
+    letter-spacing: 0.5px;
     padding: 16px;
     text-decoration: none;
+    width: 60px;
   }
   
-  li a:hover {
-    background-color: #111111;
+  .menu  li a:hover {
+    background-color:	#1E90FF; 
   }
 
-  form {
-    /* Just to center the form on the page */
-    margin: 50 auto;
-    width: 400px;
-    /* To see the outline of the form */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-  }
-  
-  label {
-    /* To make sure that all labels have the same size and are properly aligned */
-    display: inline-block;
-    width: 90px;
+  #pesquisa {
     text-align: right;
+    padding: 0px;
   }
-  footer {
-    position: fixed;
-    height: 50px;
-    background-color: #e40ac7;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
-    text-align: center;
+
+  #search {
+    background: whitesmoke;
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    border: none;
+    padding: 4px;
+    width: 50px;
+  }
+
+  input[type="text"] {
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;
+    margin: 10px;
+    padding: 4px;
+  }
+
+.row {
+  position: relative;
+}
+.column.side1 {
+  float: left;
+  padding: 12px;
+  height: 700px;
+  width: 25%;
+  background-color:#f9f6f6;
 }
 
-/* Para fornulários */
-/* https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form */
+.clearfix {
+  overflow: auto;
+}
 
+.img1 {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column.middle {
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+  padding: 16px;
+  width: 75.88%;
+  height: 700px;
+}
+
+.main {
+  font-size: 18px;
+  overflow: auto;
+
+}
+
+.img2 {
+  height: 300px;
+  width: 500px;
+  padding: 10px;
+}
+
+.column.side2 {
+  position: absolute;
+  top: 0px;
+  left: 1056px;
+  /* float: right; */
+  padding: 12px;
+  height: 700px;
+  width: 20%;
+  background-color:whitesmoke;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .column.side1, .column.side2, .column.middle {
+    width: 100%;
+  }
+}
+
+.news {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.news h2 {
+  text-align: center;
+}
+
+form{
+  padding: 12px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+input[type="number"] {
+  text-align: center;
+  border: 1px solid #e40ac7;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+}
+
+textarea{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 11px;
+  text-align: center;
+  border: 1px solid #e40ac7;
+  border-radius: 5px 5px 5px 5px;
+  overflow: auto;
+}
+.encoding {
+  font-size: 16px;
+}
+#send {
+  background: #e40ac7;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.decoding {
+  font-size: 16px;
+}
+
+#send-emsg {
+  background: #e40ac7;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  display: inline;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  color: white;
+  position: fixed;
+  /* height: 40px; */
+  background-color: #e40ac7;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  /* margin-bottom: 0px; */
+  text-align: center;
+} 
+
+footer a {
+  font-size: 12px;
+  color: whitesmoke;
+}
+
+ footer img {
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+}
