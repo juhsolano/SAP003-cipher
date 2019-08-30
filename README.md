@@ -5,7 +5,6 @@
 * [1. Motivo](#1-motivo)
 * [2. Definição do Produto](#2-definição-do-produto)
 * [3. Descrição do Produto](#3-descrição-do-produto)
-* [4. Fluxograma](#4-fluxograma)
 ***
 
 ### **1. Motivo**
@@ -51,7 +50,3 @@ O objetivo da interface correspondente ao estereótipo de temas femininos é nã
     * a. O valor **_offset_ deve ser subtraído**, dado que o objetivo é voltar na "numeração inicial". 
     
     * **IMPORTANTE**: O usuário deve se atentar a usar a mesma chave utilizada para decifrar. 
-
-### **4. Fluxograma**
-
-Cifra de César - Papo de Mulher: ![Fluxograma](URL)
