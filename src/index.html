@@ -30,47 +30,44 @@
           <input type="text" placeholder="O que você procura?"/>
           <button id="search">Ir!</button></form> </li>
       </ul> 
-
     </nav>
     
-    <div class= "row">
+    <section class= "row">
 
-      <div class= "column side1">
+      <aside class= "column side1">
         <div class="news">
           <h2>Histórias da semana!</h2>
-          <h3>Annette Kellerman presa!</h3>
+          <h3><a href = "#annette">Annette Kellerman presa!</a></h3>
           <p>Admite, "não via o menor sentido em não poder usar roupa de banho em público!"</p>
-          <h3>Bolsa como arma?</h3>
+          <h3><a href="#bolsa-arma">Bolsa como arma?</a></h3>
           <p>Mulher atinge manifestante com sua bolsa! A desconhecida seria sobrevivente de um dos maiores atos de atrocidade contra a humanidade!</p>
           <div class="clearfix">
-              <h3>Major Fisher to Ground Control!</h3>
+              <h3><a href="#major-fisher">Major Fisher to Ground Control!</a></h3>
               <p> Da materninadade ao espaço! Conheça a história.</p>
               <img class="img1" src="annefisher.jpg" alt="Anne Fisher">
           </div>
-          <h3>Continue a nadar!</h3>
+          <h3><a href="#gertrude">Continue a Nadar</a></h3>
           <p>Gertrude Ederle cruza o Canal da Mancha a nado. Inacreditável!</p>
         </div> 
-      </div>
+      </aside>
 
-      <div class="column middle"> 
-          <div>
-              <div class="main">
-                <img class="img2" src="ideologia-genero.jpg" alt="Ideologia de gênero">
-                <h2>Menina veste rosa e menino veste azul?</h2>
-                <p>Não faz diferença se menina veste azul e menino, rosa. Mas por que ainda é tão difícil educar igualmente?</p>
-              </div>   
-          </div>
-      </div>
+      <article class="column middle"> 
+         <main>
+            <div class="main">
+              <img class="img2" src="ideologia-genero.jpg" alt="Ideologia de gênero">
+              <h2>Menina veste rosa e menino veste azul?</h2>
+              <p>Não faz diferença se menina veste azul e menino, rosa. Mas por que ainda é tão difícil educar igualmente?</p>
+            </div>   
+          </main>
+      </article>
 
-      <div class = "column side2">
+      <aside class = "column side2">
         <form>
           <h2>Tire sua sorte</h2>
           <div class= "encoding">
             <h3>Deixe seu recado</h3>
-            <!-- <div id="lucky-number"> -->
               <label for="key-encode">Número da sorte</label>
               <input type="number" placeholder="Número da sorte!" value="eKey" id="eKey"/>
-            <!-- </div> -->
             <div id="enter-msg">
               <label for="message">Mensagem:</label>
               <textarea id="eMsg" name="encode_message">Escreva aqui sua mensagem</textarea>
@@ -80,13 +77,10 @@
             </div>
             <div id="outCode"></div>
           </div>
-
           <div class="decoding">
             <h3>O que elas dizem?</h3>
-            <div id="lucky-number2">
               <label for="key-decode">Número da sorte</label>
               <input type="number" placeholder="Número da sorte!" value="dKey" id="dKey"/>
-            </div>
             <div id="enter-dmsg">
               <label for="message">Mensagem:</label>
               <textarea id="dMsg" name="decode_message">Cole aqui a mensagem</textarea>
@@ -96,11 +90,9 @@
             </div>
             <div id="outDecode"></div>
           </div>
-
         </form>
-      </div>
-
-    </div>
+      </aside>
+    </section>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>

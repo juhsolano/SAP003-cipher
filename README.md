@@ -32,21 +32,22 @@ O objetivo da interface correspondente ao estereótipo de temas femininos é nã
 
 3. As funções **encode**/**decode** iniciam, tendo como parâmetros "_offset_" e "str", utilizando como argumentos os valores armazenado nas funções **btn**. 
 
-4. Por meio de um **for** é feita uma busca para separa as letras **maiúsculas** e as **minúsculas**, tendo como base na numeração decimal do cógido ACSII.
+4. Por meio de um **for** é feita uma busca para separar as letras **maiúsculas** e as **minúsculas**, tendo como base na numeração decimal do cógido ACSII.
 
 5. Para **cifrar** (função **btnEncode()**):
 
-    * _a_. se a letra for **maiúscula** (intervalo de numeração do 65 ao 90), seu valor numérico é subtraído por 65 (numeração da letra "A" - **primeira letra**) e **somado ao _offset_** (fornecido pelo usuário). O resultado é então divido por 26 (total de letras do alfabeto) e obtem-se o resto inteiro, por meio do uso do módulo (**%**). Esta operação é realizada com a finalidade de reatribuir valores numéricos às letras, partindo-se do 0. Finalmente, soma-se 65, para  obter a numeração da "nova" letra após o deslocamento.
+    * _a_. se a letra for **maiúscula** (intervalo de numeração do 65 ao 90 pelo código ASCII), seu valor numérico é subtraído por 65 (numeração da letra "A" - **primeira letra**) e **somado ao _offset_** (fornecido pelo usuário). O resultado é então divido por 26 (total de letras do alfabeto) e obtem-se o resto inteiro, por meio do uso do módulo (**%**). Esta operação é realizada com a finalidade de reatribuir valores numéricos às letras, iniciando-se do 0. Finalmente, soma-se 65, para  obter a numeração da "nova" letra, no código ASCII, após o deslocamento.
 
     * _b_. A letra correspondente à numeração obtida (por **String.fromCharCodeAt()**) é então armazenada na variável **result**.
 
     * _c_. Se a letra for **minúscula** (intervalo de numeração do 97 ao 122) passa pelo mesmo processo dos itens a. e b., com o diferencial que o valor da primeira letra ("a"), ou seja, valor a ser subtraído e somado é 97. 
 
-    * _d_. Os caracteres que não se encontram em nenhum dos intervalos são retornados como eles mesmo (**str[i]**), não havendo passado pelo processo de cifragem. 
+    * _d_. Os caracteres que não se encontram em nenhum dos intervalos são retornados como eles mesmos (**str[i]**), não havendo passado pelo processo de cifragem. 
 
     * _e_. A mensagem cifrada é printada na tela.  
 
-9. Para **decifrar** (função **btnDecode**), o mesmo processo foi executado, contudo os valores a serem subtraído para reatribuir valores numéricos às letras foram 90 e 122, para **maiúsculas** e **minúsculas**, respectivamente. Isto, considerando-se que deve-se partir agora da **última letra**. 
+9. Para **decifrar** (função **btnDecode**), o mesmo processo é executado, contudo os valores a serem subtraídos para reatribuir valores numéricos às letras foram 90 e 122, para **maiúsculas** e **minúsculas**, respectivamente. Isto, considerando-se que se deve ter como ponto de início a **última letra**. 
+
     * a. O valor **_offset_ deve ser subtraído**, dado que o objetivo é voltar na "numeração inicial". 
     
     * **IMPORTANTE**: O usuário deve se atentar a usar a mesma chave utilizada para decifrar. 
