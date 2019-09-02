@@ -113,7 +113,11 @@ header{
 .main {
   font-size: 18px;
   overflow: auto;
+}
 
+.main a {
+  text-decoration: none;
+  color: black;
 }
 
 .img2 {
@@ -138,12 +142,6 @@ header{
   clear: both;
 }
 
-@media (max-width: 600px) {
-  .column.side1, .column.side2, .column.middle {
-    width: 100%;
-  }
-}
-
 .news {
   font-family: 'Lexend Deca', sans-serif;
 }
@@ -153,6 +151,7 @@ header{
 }
 
 .news h3 a {
+  text-decoration: none;
   color: black;
 }
 form{
