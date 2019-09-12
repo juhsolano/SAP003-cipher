@@ -2,71 +2,106 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Papo de Mulher!</title>
+    <title>Papo de Mulher</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="pdm3.png"/>
   </head>
+
   <body>
+
     <header>
-      <h1>Papo de Mulher!</h1>
+      <h1>
+        <img src = "pdm3.png" width= "40" height= "40" alt= "Papo de Mulher" class= "img-logo">
+        PAPO de MULHER
+      </h1>
+      <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
     </header>
-    <nav>
+
+    <nav class="menu">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#casa">Casa</a></li>
         <li><a href="#beleza">Beleza</a></li>
         <li><a href="#culinária">Culinária</a></li>
         <li><a href="#familia">Família</a></li>
-      </ul>
-      <form>
-          <input type="search" name="search" placeholder="O que você procura?">
-          <input type="submit" value="Ir!">
-        </form>
+        <li><a href="#moda">Moda</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><form id = "pesquisa" name= "pesquisa">
+          <input type="text" placeholder="O que você procura?"/>
+          <button id="search">Ir!</button></form> </li>
+      </ul> 
     </nav>
-    <main>
-      <article>
-        <h2>Novas técnicas de hidratação capilar!</h2>
-        <p>Não rola perder!</p>
-      </article>
-      <aside>
-        <h2>Histórias da semana!</h2>
+    
+    <section class= "row">
+
+      <aside class= "column side1">
+        <div class="news">
+          <h2>Histórias da semana!</h2>
+          <h3><a href = "#annette">Annette Kellerman presa!</a></h3>
+          <p>Admite, "não via o menor sentido em não poder usar roupa de banho em público!"</p>
+          <h3><a href="#bolsa-arma">Bolsa como arma?</a></h3>
+          <p>Mulher atinge manifestante com sua bolsa! A desconhecida seria sobrevivente de um dos maiores atos de atrocidade contra a humanidade!</p>
+          <div class="clearfix">
+              <h3><a href="#major-fisher">Major Fisher to Ground Control!</a></h3>
+              <p> Da materninadade ao espaço! Conheça a história.</p>
+              <img class="img1" src="annefisher.jpg" alt="Anne Fisher">
+          </div>
+          <h3><a href="#gertrude">Continue a Nadar</a></h3>
+          <p>Gertrude Ederle cruza o Canal da Mancha a nado. Inacreditável!</p>
+        </div> 
       </aside>
-    </main>
-    <form>
-      <div>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="user_name"/>
-      </div>
-      <div>
-        <label for="key-encode">Número da sorte</label>
-        <input type="number" placeholder="Número da sorte!" value="eKey" id="eKey"/>
-      </div>
-      <div>
-        <label for="message">Mensagem:</label>
-        <textarea id="eMsg" name="encode_message">Escreva aqui sua mensagem</textarea>
-      </div>
-      <div id="outCode"></div>
-      <div>
-        <input type="submit" id="btn-enviar" value="Enviar" onclick= "btnEncode()"/>
-      </div>
-      <div>
-        <label for="key-decode">Número da sorte</label>
-        <input type="number" placeholder="Número da sorte!" value="dKey" id="dKey"/>
-      </div>
-      <div>
-        <label for="message">Mensagem:</label>
-        <textarea id="dMsg" name="decode_message">O que elas dizem?</textarea>
-      </div>
-      <div>
-        <input type="submit" id="btn2-enviar" value="Enviar" onclick= "btnDecode()"/>
-      </div>
-      <div id="outDecode"></div>
-      </form>
+
+      <article class="column middle"> 
+         <main>
+            <div class="main">
+              <img class="img2" src="ideologia-genero.jpg" alt="Ideologia de gênero">
+              <h2><a href="#menina-menino-veste">Menina veste rosa e menino veste azul?</a></h2>
+              <p>Não faz diferença se menina veste azul e menino, rosa. Mas por que ainda é tão difícil educar igualmente?</p>
+            </div>   
+          </main>
+      </article>
+
+      <aside class = "column side2">
+        <form>
+          <h2>Tire sua sorte</h2>
+          <div class= "encoding">
+            <h3>Deixe seu recado</h3>
+              <label for="key-encode">Número da sorte</label>
+              <input type="number" placeholder="Número da sorte!" value="eKey" id="eKey"/>
+            <div id="enter-msg">
+              <label for="message">Mensagem:</label>
+              <textarea id="eMsg" name="encode_message">Escreva aqui sua mensagem</textarea>
+            </div>
+            <div class="send-msg">
+              <button id="send">Enviar</button>
+            </div>
+            <div id="outCode"></div>
+          </div>
+          <div class="decoding">
+            <h3>O que elas dizem?</h3>
+              <label for="key-decode">Número da sorte</label>
+              <input type="number" placeholder="Número da sorte!" value="dKey" id="dKey"/>
+            <div id="enter-dmsg">
+              <label for="message">Mensagem:</label>
+              <textarea id="dMsg" name="decode_message">Cole aqui a mensagem</textarea>
+            </div>
+            <div class="take-msg">
+              <button id="send-emsg">Enviar</button>
+            </div>
+            <div id="outDecode"></div>
+          </div>
+        </form>
+      </aside>
+    </section>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
 
     <footer>
-        <p>©Papo de Mulher! Todos os <strong>direitos</strong> (p)reservados! Fale conosco: <a href="http://www.cidadao.sp.gov.br/servico.php?serv=1715" target="_blank" title="Entre em contato"></a></p>
-      </footer>
-
+      <p> ©Papo de Mulher! Todos os direitos (p)reservados! <a href= "http://www.cidadao.sp.gov.br/servico.php?serv=1715" target="_blank" title="Entre em contato">Fale conosco</a>&nbsp
+        <img src = "icon_fb.png" alt="Facebook">
+        <img src = "icon_insta.png" alt="Instagram">
+        <img src = "icon_wtapp.png" alt="WhatsApp"></p>    
+    </footer>
   </body>
 </html>
